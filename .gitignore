@@ -1,2 +1,7 @@
-target/
-*.bak
+﻿target/
+.idea/
+.vscode/
+*.iml
+*.log
+.DS_Store
+.env

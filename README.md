@@ -1,56 +1,91 @@
-﻿# Healthcare Risk Assessment Demo
+﻿# Healthcare AI Triage And Care Risk Command Center
 
-## Overview
+A Spring Boot healthcare operations dashboard that simulates AI-assisted symptom intake, triage interpretation, patient risk queueing, care escalation, nearby healthcare referral, business impact analysis, and governance audit tracking.
 
-Healthcare Risk Assessment Demo is a Java Swing desktop application that demonstrates a simple screening workflow using two numeric input features.
+> This is a portfolio and educational simulation. It does not provide medical diagnosis, treatment, or medical advice.
 
-This project is positioned as a recruiter-ready Java desktop portfolio piece. It focuses on UI interaction, structured Java project setup, rule-based scoring logic, and clear separation between interface and business logic.
+## Project Objective
 
-The application is intentionally framed as an educational demo and not a real clinical diagnosis system.
+The original project was a small healthcare risk assessment demo. This upgraded version turns it into a more realistic internal healthcare operations system that helps a care team answer:
 
-## Real-World Business Use Case
-
-This project maps to practical workflows relevant to:
-
-- Java Desktop Application Development
-- Internal Healthcare Software Prototyping
-- Risk Screening Demo Interfaces
-- Technical Portfolio Presentation
-- Structured Java Application Design
-
-A team may need to answer questions such as:
-
-- How can a simple desktop screening workflow be presented clearly?
-- How can Java Swing be used to build a small interactive interface?
-- How can business logic be separated from UI code?
-- How can an incomplete concept be turned into a buildable Maven project?
+- Which cases need review first?
+- What symptoms or operational risk factors increased urgency?
+- What care pathway should be recommended?
+- Should the user be routed to a clinic, urgent care, hospital, or confidential sexual health service?
+- What is the operational cost of missed follow-ups and delayed reviews?
+- What decision-support events should be visible in an audit trail?
 
 ## Key Features
 
-- Java Swing Desktop Interface
-- Two-Feature Risk Input Workflow
-- Rule-Based Risk Classification
-- Explanation Output For The Result
-- Maven Project Structure
-- Educational, Recruiter-Friendly Positioning
+- Symptom Intake Form With Selectable Symptom Chips
+- Age, Fever, Duration, Pain Level, Smoking Status, Medical History, Medication Adherence, And Missed Follow-Up Inputs
+- Sexual Health Screening Pathway With Respectful Care Routing
+- Optional Race / Ethnicity Field For Equity Audit Context Only
+- Simulated AI-Style Triage Scoring Engine
+- Possible Condition Category Output Instead Of Final Diagnosis Claims
+- Red-Flag Escalation Detection
+- Recommended Care Pathway
+- Browser Location Capture With Consent
+- Google Maps Nearby Care Referral Link
+- Patient Risk Queue
+- Care Team Capacity Monitor
+- Business Impact Simulator
+- Governance Audit Trail
+- Polished Dark Medical Command-Center UI
+- Unit Tests For Triage Escalation Logic
 
 ## Tech Stack
 
 - Java 17
-- Java Swing
+- Spring Boot
+- Spring MVC
+- Thymeleaf
+- Vanilla JavaScript
+- CSS
 - Maven
+- JUnit 5
 
-## Repository Contents
-
-- `pom.xml`
-- `src/main/java/com/healthcare/Main.java`
-- `src/main/java/com/healthcare/MedicalRecord.java`
-- `src/main/java/com/healthcare/RiskAssessor.java`
-- `README.md`
-
-## How To Run
-
-### Build
+## Run Locally
 
 ```powershell
-mvn clean package
+mvn clean test
+mvn spring-boot:run
+```
+
+Open:
+
+```text
+http://localhost:8080
+```
+
+## Suggested Screenshots
+
+Save screenshots in the `screenshots` folder:
+
+```text
+screenshots/executive-care-risk-overview.png
+screenshots/symptom-intake-triage-form.png
+screenshots/triage-result-care-referral.png
+screenshots/patient-risk-queue.png
+screenshots/care-team-capacity-monitor.png
+screenshots/business-impact-simulator.png
+screenshots/governance-audit-trail.png
+```
+
+## Safety Boundary
+
+This application intentionally uses language such as "possible condition category," "triage interpretation," and "recommended care pathway." It does not claim to diagnose patients. The project demonstrates responsible AI product design by adding safety notices, red-flag escalation, clinician-review language, and equity-audit boundaries.
+
+## Real-World Relevance
+
+Healthcare teams often need to prioritize large queues of cases, identify patients who may require urgent review, route people to the right type of care, and maintain a record of AI-assisted decision-support events. This project models those workflows in a portfolio-safe, fictional-data environment.
+
+## Future Improvements
+
+- Add Authentication And Role-Based Views
+- Store Triage Events In PostgreSQL
+- Add Provider Directory API Integration
+- Add PDF Export For Case Review Summaries
+- Add Admin-Controlled Triage Thresholds
+- Add Human Reviewer Approval Workflow
+- Add Deployment As A Dockerized Healthcare Operations Service
